@@ -1,0 +1,14 @@
+<div class="timerBox">
+    <p id='heading'>Timer</p>
+    <div class="timeWrapper">
+        <form id="timer_form">
+            <input type="number" min="0" max="60" class="time" id="hours" placeholder='00' oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "2">
+            <input type="number" min="0" max="60" class="time" id="mins" placeholder='00'   oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "2">
+            <input type="number" min="0" max="60" class="time" id="secs" placeholder='00'   oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "2" >
+            <input type="submit" id="startBtn" value="">
+            <input type="submit" id="pauseBtn" value="">
+            <input type="submit" id="resetBtn" value="Reset">
+        </form>
+    </div>
+</div>
+<script src='js/timer.js'></script>
