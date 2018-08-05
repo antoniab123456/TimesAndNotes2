@@ -9,21 +9,22 @@ let container = select('.container'),
     mins = select('#mins'),
     secs = select('#secs'),
     timer_form = select('#timer_form'),
-    time = select('.time');
+    time = select('.time'),
+    input_error = select('#input_error');
 
 listen(startBtn, 'click', startTimer);    
 listen(pauseBtn, 'click', pauseTimer);    
 listen(resetBtn, 'click', resetTimer);   
+listen(window, 'click', closeError);   
 
 
 /* Generate background on page reload */
 window.onload = () =>{
-    let idName = 'image_'+Math.floor(1 + Math.random() * 9);
+    let idName = 'image_'+Math.floor(1 + Math.random() * 5);
     container.setAttribute('id', idName);
 }
 
 function startTimer(e){
-
         if(hours.value.length !== 0 || mins.value.length !== 0 || secs.value.length !== 0){
             startBtn.style.display = "none";
             pauseBtn.style.display = 'block';
@@ -108,13 +109,11 @@ function startTimer(e){
             }
 
         } else {
-            console.log('Please fill in one of the fields');
+            input_error.style.display = "block";
+            setTimeout(autoCloseError, 3000);
             pauseBtn.style.display = 'none';
             startBtn.style.display = "block";
         }
-
-
-
         e.preventDefault();
     }
 
@@ -131,6 +130,18 @@ function resetTimer(e){
     startBtn.style.display = "block";
     timer_form.reset();
     e.preventDefault();
+}
+
+
+function closeError(e) {
+    if(e.target == input_error){
+        input_error.style.display = 'none';
+    }
+}
+
+
+function autoCloseError(){
+    input_error.style.display = 'none';
 }
 
 

@@ -1,0 +1,168 @@
+
+
+input {
+    outline: none;
+    border: none;
+}
+
+/* Remove the origin number type field arrors  */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Timer styles */
+.timerBox {
+    border: 4px solid #0b5166;
+    background-color: rgb(169, 169, 169, 0.7);
+    border-radius: 10px;
+    width: 50%;
+    height: 43%;
+    position: relative;
+    top: 15%;
+    left: 24%;
+    box-sizing: border-box;
+}
+
+#heading {
+    font-size: 70px;
+    font-family: sans-serif;
+    font-weight: 600;
+    position: relative;
+    color: #2e7585;
+    left: 35%;
+    top: 10px;
+}
+
+.timeWrapper {
+    position: relative;
+    top: 15%;
+    left: 5%;
+}
+
+/* Each hours:mins:seconds input boxes */
+.time {
+    width: 20%;
+    height: 200px;
+    background-color: #2e7585;
+    float: left;
+    margin: 0 5% 0 5%;
+    border-radius: 10px;
+    position: relative;
+    top: -20px;
+    font-size: 90px;
+    text-align: center;
+    color: transparent;
+    text-shadow: 0px 0px 0px #fff;
+    &:focus {
+        outline: none;
+    }
+}
+
+.time::placeholder {
+    color: white;
+    font-size: 90px;
+    text-align: center;
+}
+
+/* The buttons */
+#startBtn {
+    background: url('../images/start.png') no-repeat;
+    width: 52px;
+    height: 52px;
+}
+
+#startBtn,
+#pauseBtn {
+    position: relative;
+    top: 210px;
+    left: -97px;
+}
+
+#startBtn:hover,
+#pauseBtn:hover {
+    cursor: pointer;
+}
+
+#pauseBtn {
+    display: none;
+    background: url('../images/end.png') no-repeat;
+    width: 53px;
+    height: 53px;
+}
+
+#resetBtn {
+    padding: 15px 30px;
+    background-color: #2e7585;
+    font-size: 18px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    position: relative;
+    left: 400px;
+    top: 12px;
+    color: white;
+    display: none;
+}
+
+
+/* The no value error */
+
+#input_error {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 1;   
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+#inner_error {
+   background-color: #fff;
+   border: 1px solid red;
+   color: red;
+   animation: open_modal 1s;
+   margin: 37% 0 0 49%;
+   width: 20%;
+   height: 40px;
+   border-radius: 5px;
+   font-size: 15px;
+   font-family: sans-serif;
+   padding: 0px 4px 0px 7px;
+   box-sizing: border-box;
+}
+
+
+#inner_error p {
+    position: relative;
+    top: -8px;
+}
+
+/* The arror pointing to the start button */
+
+#inner_error:after, #inner_error:before{
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border: 10px solid;
+}
+
+#inner_error:after{
+   position: relative;
+   top: 11px;
+   left: 83%;
+   border-color:white transparent transparent transparent ;
+}
+
+#inner_error:before{
+    position: relative;
+    top: 48px;
+    left: 83%;
+    border-color: red transparent transparent transparent;
+}
+

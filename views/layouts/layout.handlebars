@@ -5,23 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/timer.css">
     <link rel="stylesheet" href="css/style_nav.css">
+    <link rel="stylesheet" href="css/time_date.css">
+    <link rel="stylesheet" href="css/style_responsive.css">
     <title>Timers&Notes</title>
 </head>
-<body>
+<body>    
     <div class="container">
         <div class="header">
+            {{!-- Navigation for all the files--}}
             <div id="nav">
                 <nav>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/timer">Timer</a></li>
-                        <li><a href="/time&date">Time&Date</a></li>
-                        <li><a href="/weather">Weather</a></li>
+                        <li  class='first first_home'><a href="/">Home</a></li>
+                        <li  class='first first_timer'><a href="/timer">Timer</a></li>
+                        <li class='first first_date'><a href="/time&date" >Time&Date&Weather</a></li>
+                        <li class='second second_notes'><a href="/notes" >Notes</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
+        {{!-- Inject all the other pages here --}}
         {{{body}}}
     </div>
 </body>

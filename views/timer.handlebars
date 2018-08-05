@@ -1,3 +1,4 @@
+{{!-- The main timer div --}}
 <div class="timerBox">
     <p id='heading'>Timer</p>
     <div class="timeWrapper">
@@ -5,10 +6,21 @@
             <input type="number" min="0" max="60" class="time" id="hours" placeholder='00' oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "2">
             <input type="number" min="0" max="60" class="time" id="mins" placeholder='00'   oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "2">
             <input type="number" min="0" max="60" class="time" id="secs" placeholder='00'   oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "2" >
+            {{!-- The start button --}}
             <input type="submit" id="startBtn" value="">
+            {{!-- The Pause button --}}
             <input type="submit" id="pauseBtn" value="">
+            {{!-- The Reset timer button --}}
             <input type="submit" id="resetBtn" value="Reset">
         </form>
     </div>
 </div>
+{{!-- Error if no data is entered --}}
+<div id="input_error">
+    <div id="inner_error">
+        <p>Please, choose the time to set the timer</p>
+    </div>
+</div>
+
+{{!-- Link to the JS --}}
 <script src='js/timer.js'></script>

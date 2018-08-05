@@ -5,6 +5,6 @@ let express = require('express');
 router.get('/', main.mainPageController);
 router.get('/timer', main.timerPageController);
 router.get('/time&date', main.timeDateController);
-router.get('/weather', main.weatherController);
+router.get('/notes', main.notesController);
 
 module.exports = router;

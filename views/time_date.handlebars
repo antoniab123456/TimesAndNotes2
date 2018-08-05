@@ -1,1 +1,106 @@
+{{!--Allow or deny location modal --}}
+<div id="location_modal">
+    <div id="location_wrap">
+        <p id="modal_header">Allow this website to use your location?</p>
+        <div class="buttons">
+            <button class="yes">Yes</button>
+            <button class="no">No</button>
+        </div>
+    </div>
+</div>
+
+{{!-- Allow location button, if the user denied location --}}
+<div id="allow_loc"><p>Allow Location</p></div>
+
+{{!-- The main div containing displaying the chosen country --}}
+<div id='select_country'>
+    <p id="default_option"></p>
+    {{!-- Original, default select options --}}    
+    <select id='original_select'>
+        <option value="-4" label='lat=40.7128&lon=-73.0060'>USA, New York</option>
+        <option value="-4" label='lat=42.3601&lon=-71.0589'> USA, Boston</option>
+        <option value="-4" label='lat=41.87811&lon=-87.6298'>USA, Chicago</option>
+        <option value="-5" label='lat=38.9072&lon=-77.0369'>USA, Washington, D.C.</option>
+        <option value="-7" label='lat=34.0522&lon=-118.2437'>USA, Los Angeles</option>
+        <option value="-3" label='lat=-34.603722&lon=-58.381592'>Argentina, Buenos Aires</option>
+        <option value='-3' label='lat=-31.4201&lon=-64.1888'>Argentina, Córdoba</option>
+        <option value="-3" label='lat=-32.9442&lon=-60.6505'>Argentina, Rosario</option>
+        <option value="-3" label='lat=-22.9068&lon=-43.1729'>Brazil, Rio de Janeiro</option>
+        <option value="-3" label='lat=-46.63331&lon=-23.5505'>Brazil, São Paulo</option>
+        <option value='-3' label='lat=-12.9711100&lon=-38.5108300'>Brazil, Salvador</option>
+        <option value='-4' label='lat=-33.4489&lon=-70.6693'>Santiago, Chile</option>
+        <option value="+3" label='lat=55.7558&lon=37.6173'>Russia, Moscow</option>
+        <option value="+3" label='lat=59.9343&lon=30.3351'>Russia, St.Petersburg</option>
+        <option value="+5" label='lat=56.8389&lon=60.6057'>Russia, Ekaterinburg</option>
+        <option value="+2" label='lat=54.71041&lon=20.4522'>Russia, Kaliningrad</option>
+        <option value="+2" label='lat=52.5200&lon=13.4050'>Germany, Berlin</option>
+        <option value="+2" label='lat=48.1351&lon=11.5820'>Germany, Munich</option>
+        <option value="+2" label='lat=40.4168&lon=-3.7038'>Spain, Madrid</option>
+        <option value="+2" label='lat=41.3851&lon=2.1734'>Spain, Barcelona</option>
+        <option value="+2" label='lat=50.0755&lon=14.4378'>Prague, Czechia</option>
+        <option value="+1" label='lat=38.7223&lon=-9.1393'>Portugal, Lisbon</option>
+        <option value="+1" label='lat=41.1579&lon=-8.6291'>Portugal, Porto</option>
+        <option value="+2" label='lat=47.4979&lon=19.0402'>Budapest, Hungary</option>
+        <option value="+4" label='lat=25.20481&lon=55.2708'>UAE, Dubai</option>
+        <option value="+1" label='lat=51.5074&lon=0.1278'>UK, London</option>
+        <option value="+1" label='lat=52.9548&lon=-1.1581'>UK, Nottingham</option>
+        <option value="+1" label='lat=53.4084&lon=-2.9916'>UK, Liverpool</option>
+        <option value="+1" label='lat=54.5973&lon=-5.9301' >UK, Belfast</option>
+        <option value="+1" label='lat=53.3498&lon=-6.2603'>Ireland, Dublin</option>
+    </select>
+</div>
+
+{{!-- The search bar and all the options --}}
+<div id="outside_options">
+    <div id="search_and_options">
+        {{!-- Search for countries --}}
+        <input type="text" id="search_country" placeholder="Type to search...">
+        {{!-- Where all the original options get displayed --}}
+        <div id='box_options'>
+            {{!-- Not found error if the search fails --}}
+            <div id="nothing_found"><p>Nothing found :/</p></div>
+        </div>
+    </div>
+</div>
+
+{{!-- Display the time --}}
+<div class="current_t">
+    <div class="h_m_s">
+        <p id="span_parent"> 
+            <span id="hDisplay"></span> 
+            <span id="colon1">:</span>
+            <span id="mDisplay"></span>
+            <span id="colon">:</span>
+            <span id="sDisplay"></span>
+        </p>
+    </div>
+    {{!-- Time format PM or AM --}}
+    <p class="format"></p>
+</div>
+
+{{!-- Displate the date and the current day of the week --}}
+<div class="current_d"><p class="day"></p><p class="d_m_y"><span id="date"></span> <span id="month"></span> <span id="year"></span></p></div>
+
+{{!-- Display the weather--}}
+<div class="current_weather">
+    <div id="icon"></div>
+    <div class="temp">
+        <p id="temp"><span id='deg'>25</span> °C</p>
+    </div>
+    <div class="other_params">
+        <div class="humidity">
+            <p id="humidity">Humidity : <span id='hum_percent'>47</span> % </p>
+        </div>
+        <div class="visibility">
+            <p>Visibility : <span id='visibility'>11</span> km</p>
+        </div>
+        <div class='wind'>
+            <p id="wind">Wind : <span id='win_m_s'>3</span> m/s</p>
+        </div>
+    </div>
+</div>
+
+{{!-- Links to JS files --}}
 <script src='js/time&date.js'></script>
+<script src='js/search_country.js'></script>
+<script src='js/select.js'></script>

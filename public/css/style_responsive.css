@@ -1,0 +1,75 @@
+/* Make the page responsive */
+@media(max-width: 450px){
+    #nav li{
+        display: block;
+    }
+    .first_home{
+        position: absolute;
+        top: 20px;
+        left: -15px;
+    }
+
+
+    .first_date{
+        position: absolute;
+        top: 20px;
+        left: 25%;
+    }
+    
+    .first_timer{
+        position: absolute;
+        top: 20px;
+        left: 65%;
+    }
+
+    .second_weather{
+        position: absolute;
+        top: 70px;
+        left: 50px;
+        }
+    
+    .second_notes{
+        position: absolute;
+        top: 70px;
+        left: 200px;
+    }
+
+    #welcome_header{
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    #welcome{
+        top: 130px;
+        left: 30px;
+    }
+    #welcome_header{
+        top: 10px;
+    }
+
+    .timerBox {
+        width: 90%;
+        left: 5%;
+    }
+
+    #heading{
+        font-size: 60px;
+        left: 29%;
+        top:  10%;
+    }
+
+    .timeWrapper{
+        top: 25%;
+        left: 10px;
+    }
+
+    .time{
+        width: 28%;
+        margin-left: 0.5px;
+        font-size: 70px;
+        height: 150px;
+    }
+    .time::placeholder{
+        font-size: 70px;
+    }
+}

@@ -8,8 +8,8 @@ const main = {
     timeDateController: (req, res) => {
         res.render('time_date');
     },
-    weatherController: (req, res) => {
-        res.render('weather');
+    notesController: (req, res) => {
+        res.render('notes');
     }
 }
 

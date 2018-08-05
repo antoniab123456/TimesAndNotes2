@@ -1,0 +1,317 @@
+/* The location allowance modal */
+#location_modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    overflow: auto;
+}
+
+#location_wrap {
+    background-color: #f5f5f5;
+    margin: 20% auto;
+    height: 200px;
+    width: 40%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: open_modal;
+    animation-duration: 1s;
+    padding: 70px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#modal_header {
+    margin-left: 50px;
+    font-size: 25px;
+}
+
+#location_wrap button{
+    padding: 7px 30px;
+    border-radius: 3px;
+    margin-right: 10px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #0b5166;
+}
+
+#location_wrap button:hover {
+    cursor: pointer;
+    background-color: #0b5166;
+    color: white;
+}
+
+
+
+.buttons {
+    margin: 20px 0 0 27%;
+}
+
+
+/* The allow location button */
+
+#allow_loc{
+    display: none;
+    padding: 5px 7px;
+    border-radius: 3px;
+    outline: none;
+    background-color: rgba(231, 231, 231, 0.6);
+    border: 2px solid #0b5166;
+    position: absolute;
+    top: 16.2%;
+    left: 46%;
+}
+
+#allow_loc p {
+    color: #0b5166;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+#allow_loc:hover{
+    cursor: pointer;
+    background-color: rgb(46, 117, 133, 0.7);
+}
+
+
+#allow_loc:hover p{
+    color: #fff;
+}
+
+
+/* Select styles */
+#default_option{
+    padding-top: 1px;
+}
+
+/* Select country box */
+#select_country {
+    width: 13%;
+    height: 20px;
+    padding: 2px 50px 5px 10px;
+    outline: none;
+    font-size: 15px;
+    font-family: verdana;
+    margin: 5% 0 0 26.5%;
+    border: 2px solid #0b5166;
+    border-radius: 3px;
+    border-bottom-left-radius: none;
+    border-bottom-right-radius: none;
+    color: #0b5166;
+    background: url('../images/arror.png') no-repeat 95% center;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#select_country:hover {
+    cursor: pointer;
+}
+
+/* Hide original select  */
+#original_select {
+    display: none;
+}
+
+/* Ouside the modal area */
+#outside_options{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+/* The modal with country options and the search bar */
+#search_and_options {
+    border: 2px solid #0b5166;
+    border-top: none;
+    box-sizing: border-box;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 17.6%;
+    overflow: hidden;
+    position: absolute;
+    left: 26.5%;
+    top: 20%;
+}
+
+/*The seach bar styles  */
+#search_country {
+    border-bottom: 3px solid #0b5166;
+    background-color: rgba(255, 254, 254, 0.75);
+    color: rgb(9, 118, 133);
+    padding: 5px 0 5px 15px;
+    font-size: 15px;
+    width: 100%;
+}
+
+#search_country::placeholder {
+    font-size: 15px;
+}
+
+/* The box with options */
+#box_options {
+    background-color: rgba(255, 254, 254, 0.75);
+    width: 100%;
+    height: 312px;
+    overflow-y: scroll;
+    font-size: 17px;
+    padding-top: 5px;
+}
+
+/* Each Option  */
+.optionDiv p {
+    color: #0b5166;
+    padding-left: 20px;
+}
+
+.optionDiv {
+    width: 100%;
+    position: relative;
+    padding: 2px 0 2px 0;
+}
+
+.optionDiv:hover{
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+
+/* Nothing was found in the search bar */
+#nothing_found{
+    display: none;
+}
+
+#nothing_found p{
+    color: red;
+    font-size: 15px;  
+    padding-left: 20px;
+    font-family: sans-serif;
+}
+
+/* Time and Date boxes */
+.current_t, .current_d{
+    height: 200px;
+    background-color: rgb(46, 117, 133, 0.7);
+    text-align: center;
+    color: #fff;
+    padding: 30px 0 0 0;
+    border-radius: 10px;
+    border: 3px solid #0b5166;
+    position: absolute;
+    top: 25%;
+}
+
+
+.current_t {
+    width: 25%;
+    left: 26.5%;
+}
+
+.current_d {
+    width: 27%;
+    left: 59%;
+}
+
+
+.h_m_s {
+    position: relative;
+    top: 10px;
+}
+
+.h_m_s p {
+    font-size: 70px;
+}
+
+.format {
+    font-size: 60px;
+}
+
+.day {
+    font-size: 70px;
+}
+
+.d_m_y {
+    padding: 10px;
+    font-size: 60px;
+}
+
+#hDisplay {
+    position: relative;
+    left: 14px;
+}
+
+#mDisplay {
+    position: relative;
+    left: -14px;
+}
+
+#sDisplay {
+    position: relative;
+    left: -35px;
+}
+
+#colon {
+    position: relative;
+    left: -25px;
+}
+
+#colon1 {
+    position: relative;
+    left: 2px;
+}
+
+/* The weather box */
+.current_weather{
+    width: 17%;
+    border-radius: 130px;
+    height: 230px;
+    background-color: rgba(197, 196, 196, 0.75);
+    border: 4px solid #0b5166;
+    text-align: center;
+    padding: 30px 0 0 0;
+    position: absolute;
+    top: 65%;
+    left: 26.5%;
+    padding: 50px 0 0 0;
+    box-sizing: border-box;
+}
+
+#temp{
+    color: rgb(31, 86, 99);
+    font-size: 50px;
+    position: relative;
+    left: -20px;
+}
+
+.other_params p{
+    color: rgb(31, 86, 99);
+    font-size: 18px;
+    margin-top: 5px;
+    line-height: 1em;
+    position: relative;
+    text-align: center;
+}
+
+#icon{
+    width: 60px;
+    height: 40px;
+    background: url('https://cdn.glitch.com/6e8889e5-7a72-48f0-a061-863548450de5%2F02d.png?1499366021821') no-repeat;
+    position: absolute;
+    left: 160px;
+}
+
+@keyframes open_modal {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
