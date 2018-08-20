@@ -1,11 +1,10 @@
-
-
 input {
     outline: none;
     border: none;
 }
 
 /* Remove the origin number type field arrors  */
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -13,6 +12,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* Timer styles */
+
 .timerBox {
     border: 4px solid #0b5166;
     background-color: rgb(169, 169, 169, 0.7);
@@ -42,6 +42,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* Each hours:mins:seconds input boxes */
+
 .time {
     width: 20%;
     height: 200px;
@@ -67,6 +68,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* The buttons */
+
 #startBtn {
     background: url('../images/start.png') no-repeat;
     width: 52px;
@@ -105,7 +107,6 @@ input[type=number]::-webkit-outer-spin-button {
     display: none;
 }
 
-
 /* The no value error */
 
 #input_error {
@@ -116,26 +117,24 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%;
     height: 100%;
     overflow: auto;
-    z-index: 1;   
+    z-index: 1;
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-
 #inner_error {
-   background-color: #fff;
-   border: 1px solid red;
-   color: red;
-   animation: open_modal 1s;
-   margin: 37% 0 0 49%;
-   width: 20%;
-   height: 40px;
-   border-radius: 5px;
-   font-size: 15px;
-   font-family: sans-serif;
-   padding: 0px 4px 0px 7px;
-   box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid red;
+    color: red;
+    animation: open_modal 1s;
+    margin: 37% 0 0 49%;
+    width: 20%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: sans-serif;
+    padding: 0px 4px 0px 7px;
+    box-sizing: border-box;
 }
-
 
 #inner_error p {
     position: relative;
@@ -144,7 +143,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* The arror pointing to the start button */
 
-#inner_error:after, #inner_error:before{
+#inner_error:after,
+#inner_error:before {
     content: '';
     width: 0px;
     height: 0px;
@@ -152,17 +152,16 @@ input[type=number]::-webkit-outer-spin-button {
     border: 10px solid;
 }
 
-#inner_error:after{
-   position: relative;
-   top: 11px;
-   left: 83%;
-   border-color:white transparent transparent transparent ;
+#inner_error:after {
+    position: relative;
+    top: 11px;
+    left: 83%;
+    border-color: white transparent transparent transparent;
 }
 
-#inner_error:before{
+#inner_error:before {
     position: relative;
     top: 48px;
     left: 83%;
     border-color: red transparent transparent transparent;
 }
-

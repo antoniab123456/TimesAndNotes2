@@ -1,0 +1,32 @@
+
+{{#if register_token}}
+    <div id="header_generate"><p id='main_gen_header'> To add notes, please generate an Access Token or enter the one you already have!</p> </div>
+    <div id="generate_token_model">
+        <p id="generate_header">Click on the button to generate an access token</p>
+            <div id="around_input">
+            <div id="around_input">
+                <input id="token_placement" type="text" value="" readonly>
+            </div>
+            {{!-- The hidden button that will appear after the token is generated --}}
+            <a id="ent_Token" href="/notes/login">Enter Token</a>
+        <div>
+            <button id="gen_btn">Generate Token</button>
+            <a id="already_have" href="/notes/login">Already have a token?</a>
+        </div>   
+    </div>
+{{else}}
+    <div id="header_generate"><p id='main_gen_header'> To add notes, please generate an Access Token or enter the one you already have!</p> </div>
+    <div id="enter_token_model">
+        <p id="enter_header">Enter your token and press Submit</p>
+        <div>
+            <form method="post" action="/notes/login" >
+                <input name="token" id="token_enter" type="text" placeholder="Enter Token...">
+                <button type="submit" id="submit_token_btn">Submit</button>
+                <a id="no_token" href="/notes/register">Don't have a token?</a>
+            </form>
+        </div>   
+    </div>
+{{/if}}
+
+{{!-- Links to the js --}}
+<script src='js/notes_auth.js'></script>

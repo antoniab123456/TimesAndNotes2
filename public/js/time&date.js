@@ -26,7 +26,7 @@ let container = select('.container');
 
 window.onload = () => {
     /* Randomly generate background */
-    let idName = 'image_'+ Math.floor(1 + Math.random() * 5);
+    let idName = 'image_'+ Math.floor(1 + Math.random() * 10);
     container.setAttribute('id', idName);
 
 
@@ -35,19 +35,21 @@ window.onload = () => {
         let xhr = new XMLHttpRequest;
         xhr.open('GET', url, true);
         xhr.onload = function () {
-            let weather_res = JSON.parse(this.responseText);
-            let picture = weather_res.weather[0].icon;
-            let vis = weather_res.visibility / 1000;
+            if(this.status == 200){
+                let weather_res = JSON.parse(this.responseText);
+                let picture = weather_res.weather[0].icon;
+                let vis = weather_res.visibility / 1000;
 
-            if(picture !== undefined){
-                icon.style.backgroundImage = 'url('+picture+')'; 
-            }else{
-                icon.style.backgroundImage = 'url("https://cdn.glitch.com/6e8889e5-7a72-48f0-a061-863548450de5%2F02d.png?1499366021821")'; 
+                if(picture !== undefined){
+                    icon.style.backgroundImage = 'url('+picture+')'; 
+                }else{
+                    icon.style.backgroundImage = 'url("https://cdn.glitch.com/6e8889e5-7a72-48f0-a061-863548450de5%2F02d.png?1499366021821")'; 
+                }
+                deg.innerText = Math.floor(weather_res.main.temp);
+                humid.innerText = weather_res.main.humidity;
+                visib.innerText = vis;
+                win_m_s.innerText = weather_res.wind.speed;
             }
-            deg.innerText = Math.floor(weather_res.main.temp);
-            humid.innerText = weather_res.main.humidity;
-            visib.innerText = vis;
-            win_m_s.innerText = weather_res.wind.speed;
         }
         xhr.send();
     }

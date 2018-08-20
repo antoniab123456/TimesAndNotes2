@@ -30,8 +30,72 @@
     background: url('../images/5.jpg') no-repeat;
 }
 
+#image_6 {
+    background: url('../images/6.jpg') no-repeat;
+}
+
+#image_7 {
+    background: url('../images/7.jpg') no-repeat;
+}
+
+#image_8 {
+    background: url('../images/8.jpg') no-repeat;
+}
+
+#image_9 {
+    background: url('../images/9.jpg') no-repeat;
+}
+
+#image_10 {
+    background: url('../images/10.jpg') no-repeat;
+}
+
+/* Color ids/classes */
+
+#fcc7c7,
+.fcc7c7 {
+    background-color: #fcc7c7;
+}
+
+#c5f5dd,
+.c5f5dd {
+    background-color: #c5f5dd;
+}
+
+#c2e2f5,
+.c2e2f5 {
+    background-color: #c2e2f5;
+}
+
+#fdfcae,
+.fdfcae {
+    background-color: #fdfcae;
+}
+
+#facf96,
+.facf96 {
+    background-color: #facf96;
+}
+
+#fac9e7,
+.fac9e7 {
+    background-color: #fac9e7;
+}
+
+#ead4f5,
+.ead4f5 {
+    background-color: #ead4f5;
+}
+
+#fff,
+.fff,
+.ffffff,
+#ffffff {
+    background-color: #fff;
+}
 
 /* The Welcome page styles */
+
 #welcome_header {
     font-family: Ariel;
     line-height: 1.3em;
@@ -42,7 +106,7 @@
     top: 35px;
 }
 
-#welcome{
+#welcome {
     width: 62%;
     height: 400px;
     padding: 50px 40px 50px 40px;

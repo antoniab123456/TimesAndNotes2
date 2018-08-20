@@ -1,0 +1,144 @@
+#addNote {
+    background-color: rgba(221, 216, 216, 0.8);
+    padding: 10px 30px;
+    border-radius: 3px;
+    font-family: sans-serif;
+    position: absolute;
+    top: 15%;
+    left: 28%;
+    outline: none;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: rgb(30, 92, 110);
+    font-size: 16px;
+}
+
+#addNote:hover {
+    cursor: pointer;
+    background-color: rgb(30, 92, 110);
+    border: none;
+    color: #fff;
+}
+
+#add_note_mode {
+    height: 650px;
+    width: 45%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    top: 16%;
+    left: 29%;
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+
+#note_hat {
+    height: 90px;
+    width: 100%;
+    background-color: #530e0e;
+    background: linear-gradient(#88521d, #2b1703 80%);
+}
+
+#color_header p {
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-top: 5px;
+    color: #b1aeae;
+    font-weight: 100;
+}
+
+#all_colors {
+    height: 60px;
+    border-bottom: 1px solid #bdbdbd;
+    padding-left: 20px;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+
+#add_note_color {
+    position: relative;
+    top: -20px;
+    left: 40px;
+}
+
+.color {
+    width: 20px;
+    height: 20px;
+    margin-left: 30px;
+    border: 1px solid rgb(143, 142, 142);
+    border-radius: 5px;
+    float: left;
+}
+
+.color:hover {
+    cursor: pointer;
+}
+
+#add_location {
+    width: 100%;
+    padding: 15px 0 15px 55px;
+    font-family: sans-serif;
+    font-size: 15px;
+    border-bottom: 1px solid #bdbdbd;
+}
+
+#add_location::placeholder {
+    font-size: 15px;
+    color: #b1aeae;
+    font-weight: 100;
+}
+
+.location_symb p {
+    color: #c4c2c2;
+    font-size: 32px;
+    position: absolute;
+    top: 32.7%;
+    left: 2.5%;
+}
+
+#add_name {
+    width: 100%;
+    padding: 15px 0 15px 20px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 16px;
+    border-bottom: 1px solid #bdbdbd;
+}
+
+#add_name::placeholder {
+    font-size: 15px;
+    color: #b1aeae;
+    font-weight: 100;
+}
+
+[contenteditable=true]:empty:before{
+    content:attr(data-placeholder);
+    display: block;
+    color: #b1aeae;
+}
+
+div[contentEditable=true] {
+    box-sizing: border-box;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 12px 20px 0px 20px;
+    line-height: 1.3em;
+    border: none;
+    outline: none;
+    font-family: 'Indie Flower', cursive;
+    font-size: 17px;
+    height: 364px;
+}
+
+#inner_note {
+    height: 440px;
+    overflow-y: scroll;
+}
+
+#inner_note_text a{
+    color: rgb(15, 116, 129);
+}
+
+#inner_note_text:hover a{
+    cursor: pointer;
+}
+  

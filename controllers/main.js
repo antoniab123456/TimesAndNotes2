@@ -1,3 +1,4 @@
+
 const main = {
     mainPageController: (req, res) => {
         res.render('index');
@@ -7,9 +8,6 @@ const main = {
     },
     timeDateController: (req, res) => {
         res.render('time_date');
-    },
-    notesController: (req, res) => {
-        res.render('notes');
     }
 }
 

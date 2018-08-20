@@ -1,0 +1,146 @@
+#header_generate {
+    width: 40%;
+    position: relative;
+    top: 100px;
+    left: 420px;
+}
+
+#main_gen_header {
+    color: #fff;
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 1.6em;
+}
+
+#generate_token_model,
+#enter_token_model {
+    background-color: rgba(180, 180, 180, 0.7);
+    border: 2px solid #1d5361;
+    margin: 13% 30%;
+    color: #fff;
+    width: 40%;
+    overflow: hidden;
+    height: 210px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+#generate_header,
+#enter_header {
+    font-family: sans-serif;
+    font-size: 19px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+#token_placement,
+#token_enter {
+    margin: 20px 0 0 15px;
+    width: 93%;
+    padding: 10px 11px 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: #164855;
+    border: 1px solid #1d5361;
+    box-sizing: border-box;
+}
+
+#gen_btn,
+#submit_token_btn {
+    margin-top: 15px;
+    margin-left: 32%;
+    padding: 10px 25px;
+    color: #fff;
+    background-color: #1d5361;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    outline: none;
+}
+
+#gen_btn:hover,
+#submit_token_btn:hover  {
+    cursor: pointer;
+    background-color: #3b7a8a;
+}
+#already_have,
+#no_token {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #1d5361;
+    position: relative;
+    top: 35px;
+    left: -167px;
+}
+
+#enter_token_model {
+    width: 35%;
+    margin: 13% 32%;
+}
+
+#enter_header {
+    margin-left: 10px;
+}
+
+#token_enter {
+    width: 90%;
+    margin-left: 20px;
+    padding: 10px 11px 10px 20px;
+}
+
+#submit_token_btn {
+    margin-left: 36%;
+}
+
+#no_token {
+    left: -126px;
+}
+
+#ent_Token {
+    display: none;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 32%;
+    padding: 10px 25px 10px 30px;
+    width: 20%;
+    color: #fff;
+    background-color: #1d5361;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    outline: none;
+}
+
+#ent_Token:hover {
+    cursor: pointer;
+    background-color: #3b7a8a;
+}
+
+.logout {
+    background-color: rgba(221, 216, 216, 0.8);
+    padding: 10px 30px;
+    border-radius: 3px;
+    outline: none;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    color: rgb(30, 92, 110);
+}
+
+.logout:hover {
+    cursor: pointer;
+    background-color: rgb(30, 92, 110);
+    border: none;
+    color: #fff;
+}

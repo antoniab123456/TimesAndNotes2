@@ -1,4 +1,5 @@
 /* The location allowance modal */
+
 #location_modal {
     display: none;
     position: fixed;
@@ -29,7 +30,7 @@
     font-size: 25px;
 }
 
-#location_wrap button{
+#location_wrap button {
     padding: 7px 30px;
     border-radius: 3px;
     margin-right: 10px;
@@ -44,16 +45,13 @@
     color: white;
 }
 
-
-
 .buttons {
     margin: 20px 0 0 27%;
 }
 
-
 /* The allow location button */
 
-#allow_loc{
+#allow_loc {
     display: none;
     padding: 5px 7px;
     border-radius: 3px;
@@ -71,23 +69,23 @@
     font-family: sans-serif;
 }
 
-#allow_loc:hover{
+#allow_loc:hover {
     cursor: pointer;
     background-color: rgb(46, 117, 133, 0.7);
 }
 
-
-#allow_loc:hover p{
+#allow_loc:hover p {
     color: #fff;
 }
 
-
 /* Select styles */
-#default_option{
+
+#default_option {
     padding-top: 1px;
 }
 
 /* Select country box */
+
 #select_country {
     width: 13%;
     height: 20px;
@@ -110,12 +108,14 @@
 }
 
 /* Hide original select  */
+
 #original_select {
     display: none;
 }
 
 /* Ouside the modal area */
-#outside_options{
+
+#outside_options {
     display: none;
     width: 100%;
     height: 100%;
@@ -127,6 +127,7 @@
 }
 
 /* The modal with country options and the search bar */
+
 #search_and_options {
     border: 2px solid #0b5166;
     border-top: none;
@@ -141,6 +142,7 @@
 }
 
 /*The seach bar styles  */
+
 #search_country {
     border-bottom: 3px solid #0b5166;
     background-color: rgba(255, 254, 254, 0.75);
@@ -155,6 +157,7 @@
 }
 
 /* The box with options */
+
 #box_options {
     background-color: rgba(255, 254, 254, 0.75);
     width: 100%;
@@ -165,6 +168,7 @@
 }
 
 /* Each Option  */
+
 .optionDiv p {
     color: #0b5166;
     padding-left: 20px;
@@ -176,27 +180,28 @@
     padding: 2px 0 2px 0;
 }
 
-.optionDiv:hover{
+.optionDiv:hover {
     background-color: #fff;
     cursor: pointer;
 }
 
-
-
 /* Nothing was found in the search bar */
-#nothing_found{
+
+#nothing_found {
     display: none;
 }
 
-#nothing_found p{
+#nothing_found p {
     color: red;
-    font-size: 15px;  
+    font-size: 15px;
     padding-left: 20px;
     font-family: sans-serif;
 }
 
 /* Time and Date boxes */
-.current_t, .current_d{
+
+.current_t,
+.current_d {
     height: 200px;
     background-color: rgb(46, 117, 133, 0.7);
     text-align: center;
@@ -208,17 +213,15 @@
     top: 25%;
 }
 
-
 .current_t {
     width: 25%;
     left: 26.5%;
 }
 
 .current_d {
-    width: 27%;
-    left: 59%;
+    width: 30%;
+    left: 57%;
 }
-
 
 .h_m_s {
     position: relative;
@@ -268,7 +271,8 @@
 }
 
 /* The weather box */
-.current_weather{
+
+.current_weather {
     width: 17%;
     border-radius: 130px;
     height: 230px;
@@ -283,14 +287,14 @@
     box-sizing: border-box;
 }
 
-#temp{
+#temp {
     color: rgb(31, 86, 99);
     font-size: 50px;
     position: relative;
     left: -20px;
 }
 
-.other_params p{
+.other_params p {
     color: rgb(31, 86, 99);
     font-size: 18px;
     margin-top: 5px;
@@ -299,7 +303,7 @@
     text-align: center;
 }
 
-#icon{
+#icon {
     width: 60px;
     height: 40px;
     background: url('https://cdn.glitch.com/6e8889e5-7a72-48f0-a061-863548450de5%2F02d.png?1499366021821') no-repeat;

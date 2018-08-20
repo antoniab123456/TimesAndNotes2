@@ -1,1 +1,146 @@
-<script src='js/notes.js'></script>
+{{!-- Inside the node edit mode --}}
+{{#if note_params}}
+    <div id="add_note_mode" class="{{note_params.color}}">  
+        <div id='note_hat'></div>
+
+        {{!-- Link to Delete --}}
+        <a class='bin_inside' href='/notes/delete?note={{note_params._id}}'>&#10007;</a>
+
+        {{!-- Name change--}}
+        <input type="text" class="{{note_params.color}}" id="add_name" placeholder="Add name..." value="{{note_params.name}}">
+
+        {{!-- Color change --}}
+        <div id="inside_note_mode">
+            <div  class={{note_params.color}} id="all_colors">
+                <div id="color_header"><p class='bord'>Color :</p></div>
+                <div id="add_note_color">
+                    <div class="color" id="fcc7c7"></div>
+                    <div class="color" id="c5f5dd"></div>
+                    <div class="color" id="c2e2f5"></div>
+                    <div class="color" id="fdfcae"></div>
+                    <div class="color" id="facf96"></div>
+                    <div class="color" id="fac9e7"></div>
+                    <div class="color" id="ead4f5"></div>
+                    <div class="color" id="fff"></div>
+                </div>
+            </div>
+
+            {{!-- Location change --}}
+            <input type="text" id="add_location" class="{{note_params.color}}" placeholder="Add location..." value="{{note_params.location}}">
+            <div class='location_symb'><p id='loc_symb'>&#x27A3;</p></div>
+            
+            {{!--  Text change--}}
+            <div id="inner_note" class="{{note_params.color}}">
+                {{#if note_params.text}}
+                    <div id="inner_note_text" class="{{note_params.color}}" contentEditable='true' data-placeholder="Type...">{{note_params.text}}</div> 
+                {{else}}
+                    <div id="inner_note_text" class="{{note_params.color}}" contentEditable='true' data-placeholder="Type..."></div>
+                {{/if}}
+                <div class="change_font">T</div>
+            </div>
+        </div>
+    </div>   
+
+    {{!-- Delete note modal --}}
+    <div id="delete_inside_note_modal">
+        <div id="delete_note_wrap">
+            <p id="delete_modal_header">Delete the note?</p>
+            <div class="buttons">
+                <a class="delete_one">Delete</a>
+                <a class="cancel_one">Cancel</a>
+            </div>
+        </div>
+    </div>
+
+
+{{!-- Note preview mode --}}
+{{else}}
+        {{!-- Add note FORM --}}
+        <form method='post' action="/notes/add">
+            <button type="submit" id="addNote">+ Add note</button>
+        </form>
+        {{!-- Logout button --}}
+        <div class="logout_btn"><a href="/notes/logout" class="logout">Logout</a></div>
+
+        {{!-- Section for STARRED notes --}}
+        {{#if notes}}
+            <div id="preview_note_mode_starred">
+                <div class="starred_header">Starred</div>
+                {{#each notes}}
+                    {{#if pin}}
+                        <div class="preview_note">
+                            <div class="preview_hat">
+                                <a class='preview_bin' href='/notes/delete?note={{_id}}'>&#10007;</a>
+                            </div>
+                            <div id='note_preview_link'>
+                                <a id="note_preview_name" href="/notes/edit?note={{_id}}"><div class='{{color}}' id='name_color'><div>{{name}}</div></div></a> 
+                                {{#if location}}
+                                    <p id='{{color}}' class='loc_symb_prev'>&#x27A3; <span class='loc_prev_span' href=>{{location}}</span></p>
+                                {{/if}}
+                                <a href="/notes/edit?note={{_id}}" id="note_preview_text"><div class='{{color}}' id='text_color'><div id="text_inside_prev">{{text}}</div></div></a> 
+                                <div class="time_created">
+                                    <p id='time_created'>
+                                        <span id="date_created">{{time.month}}/{{time.day}}/{{time.year}}</span>
+                                        <span class="dis_time">{{time.hours}}:{{time.mins}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href='/notes/pin?note={{_id}}' class='star_empty'>&#x2606;</a>
+                            <a href='/notes/pin?note={{_id}}' class='star_filled'>&#9733;</a>
+                        </div>
+                    {{/if}}
+                {{/each}}
+            </div>
+
+            {{!-- Section for All notes --}}
+            <div id="preview_note_mode">
+                <div class="all_header">All Notes</div>
+                {{#each notes}}
+                    {{#if pin}}
+                    {{else}}
+                        <div class="preview_note">
+                            <div class="preview_hat">
+                                <a class='preview_bin' href='/notes/delete?note={{_id}}'>&#10007;</a>
+                            </div>
+                            <div id='note_preview_link'>
+                                <a id="note_preview_name" href="/notes/edit?note={{_id}}"><div class='{{color}}' id='name_color'><div>{{name}}</div></div></a> 
+                                {{#if location}}
+                                    <p id='{{color}}' class='loc_symb_prev'>&#x27A3; <span class='loc_prev_span' href=>{{location}}</span></p>
+                                {{/if}}
+                                <a href="/notes/edit?note={{_id}}" id="note_preview_text"><div class='{{color}}' id='text_color'><div id="text_inside_prev">{{text}}</div></div></a> 
+                                <div class="time_created">
+                                    <p id='time_created'>
+                                        <span id="date_created">{{time.month}}/{{time.day}}/{{time.year}}</span>
+                                        <span class="dis_time">{{time.hours}}:{{time.mins}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href='/notes/pin?note={{_id}}' class='star2'>&#x2606;</a>
+                            <a href='/notes/pin?note={{_id}}' class='star_checked'>&#9733;</a>
+                        </div>
+                    {{/if}}
+                {{/each}}
+            </div>
+        {{/if}}
+
+        {{!--Delete note modal from inside the edit note --}}
+        <div id="delete_note_modal">
+            <div id="delete_note_wrap">
+                <p id="delete_modal_header">Delete the note?</p>
+                <div class="buttons">
+                    <a class="delete">Delete</a>
+                    <a class="cancel">Cancel</a>
+                </div>
+            </div>
+        </div>
+{{/if}}
+
+
+{{!-- Links to the JS --}}
+<script src="js/notes.js"></script>
+<script src="js/delete_note.js"></script>
+<script src="js/pin_note.js"></script>
+<script src="js/style_note.js"></script>
+
+
+
